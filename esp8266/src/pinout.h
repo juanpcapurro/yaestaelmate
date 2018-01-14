@@ -2,6 +2,7 @@
 #define PINOUT_H
 
 #define D0 16
+#define RED_LED_INVERTED 16
 #define D1 5
 #define D2 4
 #define D3 0
