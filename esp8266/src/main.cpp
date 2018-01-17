@@ -8,7 +8,7 @@
 #include "pinout.h"
 
 const char* NOTIFICATION_SERVER_URL = "http://192.168.0.17:3000/json_rpc";
-const int BUTTON_PIN = D1;
+const int BUTTON_PIN = D7;
 
 class Debounced_pushbutton{
     public:

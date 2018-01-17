@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 var jayson  = require('jayson');
 const child_process = require('child_process');
 var cors = require('cors');
