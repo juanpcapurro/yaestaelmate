@@ -12,6 +12,9 @@
     "cors": "^2.8.4",
     "jayson": "^2.0.5"
   },
+  "bin":{
+    "yaestaelmate":"notification_server.js"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
