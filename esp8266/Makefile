@@ -14,7 +14,7 @@ program:
 	platformio -f -c vim run --target program
 
 uploadfs:
-	platformio -f -c vim run --target uploadfs
+	platformio -f -c vim run --target buildfs && platformio -f -c vim run --target uploadfs
 
 update:
 	platformio -f -c vim update

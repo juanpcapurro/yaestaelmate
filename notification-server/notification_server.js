@@ -1,18 +1,18 @@
-var jayson  = require('jayson');
-const child_process = require('child_process');
-var cors = require('cors');
-var connect = require('connect');
-var jsonParser = require('body-parser').json;
-var app = connect();
+#! /usr/bin/env node
+var jayson          = require('jayson');
+var cors            = require('cors');
+var connect         = require('connect');
+var jsonParser      = require('body-parser').json;
+var notifier        = require('node-notifier');
+var app             = connect();
 
 var server = jayson.server({
   ya_esta_el_mate: function(args, callback) {
-    if (typeof args[0] !== 'string'){
-      child_process.spawn('notify-send', ['ya esta el mate']);
-    }else{
-      child_process.spawn('notify-send', [args[0]]);
-    }
-    callback(null,);
+    notifier.notify({
+      title: (typeof args[0] === 'string') ? args[0] + ' ': 'ya esta el mate',
+      message:(typeof args[1] === 'string') ? args[1] + ' ' : ' '
+    });
+    callback(null);
   }
 });
 

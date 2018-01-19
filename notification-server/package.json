@@ -1,13 +1,17 @@
 {
   "name": "yaestaelmate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "don't ever let your mate get cold again",
   "main": "notification_server.js",
+  "bin": {
+    "yaestaelmate": "notification_server.js"
+  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "connect": "^3.6.5",
     "cors": "^2.8.4",
-    "jayson": "^2.0.5"
+    "jayson": "^2.0.5",
+    "node-notifier": "^5.2.1"
   },
   "devDependencies": {},
   "scripts": {
